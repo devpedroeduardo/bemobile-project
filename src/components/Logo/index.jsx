@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import logo from '../../assets/logo-bemobile.png';
+import logo from '../../assets/Logo/logo-bemobile.png';
 
 
 export const Logo = styled.img.attrs(() => ({
