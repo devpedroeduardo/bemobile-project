@@ -8,7 +8,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: #f8f9fa;
     color: #212529;
   }
@@ -17,8 +17,6 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     color: inherit;
   }
-
-  /* Outros estilos globais */
 `;
 
 export default GlobalStyle;

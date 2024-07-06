@@ -23,7 +23,7 @@ const SearchIconStyle = styled(SearchIcon)`
 const StyledInput = styled.input`
   width: 287px;
   height: 48px;
-  padding: 10px 10px 10px 40px; /* Espaço para o ícone */
+  padding: 10px 10px 10px 40px;
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 16px;
@@ -36,20 +36,25 @@ const StyledInput = styled.input`
   @media (max-width: 768px) {
     width: 335px;
     font-size: 14px;
-    padding: 8px 8px 8px 35px; /* Ajusta o padding para telas menores */
+    padding: 8px 8px 8px 35px;
   }
 
   @media (max-width: 480px) {
     font-size: 12px;
-    padding: 6px 6px 6px 30px; /* Ajusta o padding para telas ainda menores */
+    padding: 6px 6px 6px 30px;
   }
 `;
 
-export const SearchInput = () => {
+export const SearchInput = ({ value, onChange }) => {
   return (
     <InputContainer>
       <SearchIconStyle />
-      <StyledInput type="text" placeholder="Pesquisar" />
+      <StyledInput
+       type="text" 
+       placeholder="Pesquisar"
+       value={value}
+       onChange={onChange}
+        />
     </InputContainer>
   );
 };
