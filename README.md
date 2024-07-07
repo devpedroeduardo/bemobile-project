@@ -34,8 +34,10 @@ $ npm install
 
 ### 3. Comandos para Execução do Projeto
 ```bash
-# Execute o comando para iniciar o projeto
+# Execute o comando para inciar o json-server
+$ npm run server
 
+# Execute o comando para rodar o projeto
 $ npm run dev
 ```
 ## Tecnologias Utilizadas
