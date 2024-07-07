@@ -12,6 +12,8 @@ const InputContainer = styled.div`
   }
 `;
 
+
+
 const SearchIconStyle = styled(SearchIcon)`
   position: absolute;
   top: 50%;
