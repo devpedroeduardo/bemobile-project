@@ -1,6 +1,6 @@
-import React from 'react'
-import { formatDate, formatPhone } from '../../utils/tools';
-import styled from 'styled-components';
+import React from "react";
+import { formatDate, formatPhone } from "../../utils/tools";
+import styled from "styled-components";
 
 const TableContainer = styled.div`
   width: 100%;
@@ -13,10 +13,10 @@ const StyledTable = styled.table`
   border-collapse: separate;
   border-spacing: 0 2px;
 
-  &>tbody tr {
+  & > tbody tr {
     box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2);
     img {
-    border-radius: 100%
+      border-radius: 100%;
     }
   }
 
@@ -79,5 +79,5 @@ export const Table = ({ data = [] }) => {
         </tbody>
       </StyledTable>
     </TableContainer>
-  )
-}
+  );
+};
