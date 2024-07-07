@@ -4,7 +4,6 @@ import { Header } from "../../components/Header/";
 import { Logo } from "../../components/Logo";
 import { SearchInput } from "../../components/Input";
 import { Body } from "../../components/Body";
-import employeesData from "../../../data/db.json";
 
 const HomeContainer = styled.div`
   width: 100%;
@@ -31,14 +30,16 @@ const SearchContainer = styled.div`
 
 function Home() {
   const [searchTerm, setSearchTerm] = useState("");
-  const [filteredData, setFilteredData] = useState(employeesData.employees);
+  const [filteredData, setFilteredData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [employees, setEmployees] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch("http://localhost:3001/employees");
         const data = await response.json();
+        setEmployees(data);
         setFilteredData(data);
         setIsLoading(false);
       } catch (error) {
@@ -53,13 +54,13 @@ function Home() {
   useEffect(() => {
     if (!isLoading) {
       const lowercasedFilter = searchTerm.toLowerCase();
-      const filtered = filteredData.filter(
+      const filtered = employees.filter(
         (employee) =>
           employee.name.toLowerCase().includes(lowercasedFilter) ||
           employee.job.toLowerCase().includes(lowercasedFilter) ||
           employee.phone.includes(lowercasedFilter)
       );
-      setFilteredData(filtered);
+      setFilteredData(searchTerm === "" || !filtered ? employees : filtered);
     }
   }, [searchTerm, isLoading]);
 

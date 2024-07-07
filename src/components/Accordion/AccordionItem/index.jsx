@@ -5,8 +5,10 @@ import ArrowIcon from "../../../assets/Icon/arrow";
 
 const AccordionRow = styled.tr`
   cursor: pointer;
-  background-color: #f9f9f9;
+  background-color: #FFF;
+  border-collapse: collapse;
   display: ${(props) => (props.open ? "table-row" : "none")};
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2);
 
   td {
     padding: 16px 23px;
@@ -16,6 +18,7 @@ const AccordionRow = styled.tr`
 
 const AccordionShadow = styled.tr`
   box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
   & > td {
     padding: 16px;
     text-align: center;
