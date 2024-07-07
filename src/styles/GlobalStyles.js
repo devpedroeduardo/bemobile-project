@@ -9,7 +9,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa;
+    background-color: #F0F0F0;
     color: #212529;
   }
 
