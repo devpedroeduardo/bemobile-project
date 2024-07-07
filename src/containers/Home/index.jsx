@@ -53,14 +53,15 @@ function Home() {
 
   useEffect(() => {
     if (!isLoading) {
-      const lowercasedFilter = searchTerm.toLowerCase();
+      const lowercasedFilter = searchTerm.trim().toLowerCase();
       const filtered = employees.filter(
         (employee) =>
           employee.name.toLowerCase().includes(lowercasedFilter) ||
           employee.job.toLowerCase().includes(lowercasedFilter) ||
           employee.phone.includes(lowercasedFilter)
       );
-      setFilteredData(searchTerm === "" || !filtered ? employees : filtered);
+      let result = searchTerm == "" || filtered.empty ? employees : filtered;
+      setFilteredData(result);
     }
   }, [searchTerm, isLoading]);
 

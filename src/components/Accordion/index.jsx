@@ -1,8 +1,7 @@
 import React from "react";
 import { AccordionItem } from "./AccordionItem";
-import CircleIcon  from "../../assets/Icon/circle"
+import CircleIcon from "../../assets/Icon/circle";
 import styled from "styled-components";
-
 
 const TableContainer = styled.div`
   width: 100%;
@@ -22,8 +21,8 @@ const StyledTable = styled.table`
     padding-inline: 16px;
     text-align: center;
 
-     &:first-child{
-    text-align: start;
+    &:first-child {
+      text-align: start;
     }
   }
 
